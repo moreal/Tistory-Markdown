@@ -11,3 +11,8 @@
 이 프로젝트는 초반의 약간의 수고를 감수하더라도 나중에는 편리하게, 개발자를 위한 환경을 구축하고자 하였습니다
 
 // TODO: English ReadMe.md::Overview
+
+## TODO
+
+- [ ] Auto Post (to Twitter, Facebook, etc..)
+- [ ] Check Copyright (pytistory, pymarkdown)
