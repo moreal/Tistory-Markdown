@@ -1,0 +1,2 @@
+markdown2==latest
+pytistory==0.0.1

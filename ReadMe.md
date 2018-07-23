@@ -15,4 +15,4 @@
 ## TODO
 
 - [ ] Auto Post (to Twitter, Facebook, etc..)
-- [ ] Check Copyright (pytistory, pymarkdown)
+- [ ] Check Copyright (pytistory, markdown2)
