@@ -14,3 +14,4 @@ class Tima(object):
         from os import environ
         access_token = environ.get("TIMA_ACCESS_TOKEN")
         self.pytistory.configure(access_token=access_token)
+        self.blog_name = environ.get("TIMA_BLOG_NAME")
