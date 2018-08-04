@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import click
 
 from core import Tima
@@ -18,19 +19,9 @@ from core import Tima
 def tima(cmd, args):
     tima = Tima()
 
-    if cmd == "post":
-        try:
-            cmd = args[0]
-            if cmd == "create":
-                create(args[1])
-            elif cmd == "upload":
-                upload(args[1])
-            elif cmd == "list":
-                show_list()
-        except IndexError as e:
-            click.echo('too less args..')
+    from core.router import Router
 
-    click.echo("Test!!")
+    Router.command_route(cmd, args)
 
 
 if __name__ == "__main__":
