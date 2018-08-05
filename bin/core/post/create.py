@@ -15,4 +15,5 @@ category 계층 list를 받거나 int 값을 직접 받아서 post합니다. 기
 
 def create(filename):
     with open(filename, 'w') as f:
-        f.close()
+        from config import DEFAULT_MARKDOWN
+        f.write(DEFAULT_MARKDOWN)
