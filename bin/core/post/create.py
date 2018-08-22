@@ -8,12 +8,14 @@
 :tags: list[AnyStr...]
 태그들을 list로 받아야 합니다
 
-:category: list[AnyStr...] or int
-category 계층 list를 받거나 int 값을 직접 받아서 post합니다. 기본값은 0입니다
+:category: list[AnyStr, ...]
+category 계층 list를 받아 upload 합니다
 """
 
+from typing import AnyStr
 
-def _create(filename):
+
+def _create(filename: AnyStr):
     with open(filename, 'w') as f:
         from config import DEFAULT_MARKDOWN
         f.write(DEFAULT_MARKDOWN)

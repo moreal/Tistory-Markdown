@@ -1,9 +1,9 @@
-from core import Tima
+from pytistory import PyTistory
 
 
 class Post():
-    def __init__(self, tima: Tima):
-        self.tima = tima
+    def __init__(self, pytistory: PyTistory):
+        self.pytistory = pytistory
 
         from core.post.upload import _upload
         self.upload = _upload
