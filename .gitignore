@@ -1,3 +1,1 @@
-/bin/core/__pycache__/*
-/bin/core/post/__pycache__/*
-/bin/core/info/__pycache__/*
+__pycache__
