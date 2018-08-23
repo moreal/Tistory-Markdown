@@ -1,5 +1,5 @@
 from core import Tima
-from typing import List, AnyStr, Type, Dict
+from typing import List, AnyStr, Type
 
 import click
 
@@ -14,7 +14,7 @@ def is_type_list(_type: Type, _list: List[AnyStr]) -> bool:
 def get_category(_tima: Tima, _category: List[AnyStr]) -> int:
     resp = _tima.pytistory.category.list(blog_name=_tima.blog_name)
     categories = resp['item']['categories']
-    
+
     if isinstance(_category, str):
         _category = _category.strip()
     elif isinstance(_category, list):

@@ -9,8 +9,7 @@ from core import Tima
     - upload (by env conf)
     - list (list)
 - info
-    - version
-"""
+    - version"""
 
 
 @click.command()
@@ -22,7 +21,3 @@ def tima(cmd, args):
     from core.router import Router
 
     Router.command_route(tima, cmd, args)
-
-
-if __name__ == "__main__":
-    tima()

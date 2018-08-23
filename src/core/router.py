@@ -15,8 +15,6 @@ class Router():
         args: 명령의 인자로 주어진 값들입니다\n
         """
 
-        from core.info import Info
-
         try:
             if cmd == "info":
                 if args[0] == "version":
@@ -28,5 +26,5 @@ class Router():
                     tima.post.list(tima)
                 elif args[0] == "upload":
                     tima.post.upload(tima, args[1])
-        except IndexError as e:
+        except IndexError:
             click.echo("[!] Tima :: input args are too short..")
