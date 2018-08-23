@@ -1,5 +1,6 @@
 # Tistory-Markdown
 
+![](docs/img/logo.gif)
 ## Overview
 기존의 티스토리에서 마크다운을 사용하는 방법 아래와 같았습니다
 
@@ -10,9 +11,4 @@
 
 이 프로젝트는 편하게 마크다운으로 작성하고 티스토리에 포스팅하는 것을 목적으로 합니다
 
-// TODO: English ReadMe.md::Overview
-
-## TODO
-
-- [ ] Auto Post (to Twitter, Facebook, etc..)
-- [ ] Check Copyright (pytistory, markdown2)
+## Contribute
