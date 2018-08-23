@@ -1,5 +1,7 @@
 from core import Tima
-from typing import List, AnyStr, Type
+from typing import List, AnyStr, Type, Dict
+
+import click
 
 
 def is_type_list(_type: Type, _list: List[AnyStr]) -> bool:
@@ -9,20 +11,20 @@ def is_type_list(_type: Type, _list: List[AnyStr]) -> bool:
     return True
 
 
-def get_category(_tima: Tima, _list: List[AnyStr]) -> int:
-    if _list is None or len(_list) == 0:
-        return -1
+def get_category(_tima: Tima, _category: List[AnyStr]) -> int:
+    resp = _tima.pytistory.category.list(blog_name=_tima.blog_name)
+    categories = resp['item']['categories']
+    
+    if isinstance(_category, str):
+        _category = _category.strip()
+    elif isinstance(_category, list):
+        _category = "/".join(_category)
 
-    resp = _tima.pytistory.category.list(blog_name=tima.blog_name)
-    categories = data['tistory']['item']['categories']['category']
+    categories = list(filter(lambda x: x['label'] == _category, categories))
+    category = categories[0]['id'] if len(categories) > 0 else None
 
-    _list = _list.reverse()
-    _parent = None
-
-    x = None
-    for _cate in _list:
-        _find = list(filter(lambda c: c['name'] == _cate))  # c is category
-        
-        filter()
-
-    return _parent
+    if category is None:
+        click.echo(f"[!] Wrong Category :: Input is {_category}")
+        exit(0)
+    else:
+        return category

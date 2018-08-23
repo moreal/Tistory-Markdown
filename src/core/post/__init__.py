@@ -2,9 +2,7 @@ from pytistory import PyTistory
 
 
 class Post():
-    def __init__(self, pytistory: PyTistory):
-        self.pytistory = pytistory
-
+    def __init__(self):
         from core.post.upload import _upload
         self.upload = _upload
 

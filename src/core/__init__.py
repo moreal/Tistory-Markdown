@@ -8,8 +8,8 @@ from core.info import Info
 class Tima(object):
     def __init__(self):
         self.pytistory = PyTistory()
-        self.post = Post(self.pytistory)
-        self.info = Info(self.pytistory)
+        self.post = Post()
+        self.info = Info()
 
         from os import environ
         access_token = environ.get("TIMA_ACCESS_TOKEN")

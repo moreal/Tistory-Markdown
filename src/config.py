@@ -7,3 +7,5 @@ tags: ['hihi', 'huhu']
 Well, hello there, world.
 
 """
+
+VERSION = "0.1v"

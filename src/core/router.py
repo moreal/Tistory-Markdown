@@ -20,13 +20,13 @@ class Router():
         try:
             if cmd == "info":
                 if args[0] == "version":
-                    click.echo(tima.info.version())
+                    tima.info.version()
             elif cmd == "post":
                 if args[0] == "create":
                     tima.post.create(args[1])
                 elif args[0] == "list":
-                    tima.post.list()
-                elif args[0] "upload":
-                    tima.post.upload()
+                    tima.post.list(tima)
+                elif args[0] == "upload":
+                    tima.post.upload(tima, args[1])
         except IndexError as e:
             click.echo("[!] Tima :: input args are too short..")

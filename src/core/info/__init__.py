@@ -1,9 +1,8 @@
 from pytistory import PyTistory
+from config import VERSION
 
 
 class Info():
-    def __init__(self, pytistory: PyTistory):
-        self.pytistory = pytistory
-
-    def version(self) -> dict:
-        return self.pytistory.blog.info()
+    def __init__(self):
+        from core.info.version import _version
+        self.version = _version
